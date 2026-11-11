@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Jarvis · Routines</title>
+<main><nav><a href="/">Jarvis</a></nav><h1>Reusable routines</h1><p>Save a phrase and its steps. Say “Hey Jarvis, start work,” type the phrase in chat, or run it here. No model call is needed.</p>
+<label>Saved routines <select id="saved"><option value="">New routine</option></select></label>
+<section><h2>Teach a shortcut</h2><p>Open pages in Jarvis’s browser while recording. Only page addresses are captured, with query strings and fragments removed. Review and edit them before saving.</p>
+<button id="teach-start" type="button">Start teaching</button> <button id="teach-stop" type="button" disabled>Stop and review</button> <button id="teach-cancel" type="button" disabled>Cancel recording</button>
+<p id="teach-status" role="status"></p></section><form id="editor"><p><label>Trigger phrase <input id="phrase" required maxlength="60" placeholder="Start work"></label></p>
+<p><label>Websites to open (one HTTPS address per line)<br><textarea id="sites" rows="5" cols="44"></textarea></label></p>
+<p><label><input type="checkbox" id="reminders" checked> Show today’s reminders</label></p>
+<button type="submit">Save</button> <button type="button" id="run" disabled>Run saved routine</button> <button type="button" id="remove" disabled>Delete</button></form>
+<pre id="result" role="status"></pre><section><h2>Resume my work</h2><p>Choose what to save. Jarvis does not capture tabs or files automatically.</p>
+<form id="handoff"><p><label>Websites (one HTTPS URL per line)<br><textarea id="work-sites" rows="3"></textarea></label></p>
+<p><label>Documents (one full file path per line)<br><textarea id="work-files" rows="3"></textarea></label></p>
+<p><label>Next step<br><textarea id="next-step" maxlength="2000" rows="3"></textarea></label></p>
+<button>Save handoff</button> <button type="button" id="restore">Restore saved work</button></form>
+<pre id="work-result" role="status"></pre></section><section id="screen-snapshot"><h2>What am I looking at?</h2>
+<p>Choose a window, or upload a screenshot. Review the snapshot before sending it to the local model.</p>
+<button type="button" id="look-capture">Look at my screen</button>
+<label>Or choose a screenshot <input id="look-file" type="file" accept="image/*"></label>
+<p><img id="look-preview" alt="Snapshot preview" hidden style="max-width:100%;max-height:400px"></p>
+<form id="look-form"><label>Question <input id="look-question" maxlength="1000" placeholder="What am I looking at?"></label>
+<button id="look-ask" disabled>Ask Jarvis</button> <button type="button" id="look-clear">Clear snapshot</button></form>
+<pre id="look-result" role="status" style="white-space:pre-wrap"></pre></section></main><script src="/personal/routines.js" defer></script></html>

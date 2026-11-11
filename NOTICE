@@ -1,0 +1,5 @@
+Jarvis Personal Assistant — sanitized installation snapshot
+Based on OpenJarvis (https://github.com/open-jarvis/OpenJarvis), Apache-2.0.
+The recovered source includes local modifications for voice, routines, browser observation, research, screen snapshots, scheduling, and free-only routing.
+The original Git commit and certain original source components are unavailable. See PROVENANCE.json.
+Bundled third-party notices and source comments must be retained.
